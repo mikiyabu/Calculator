@@ -18,8 +18,7 @@ img {
 }
 
 .calculator {
-    width: 400px;
-    height: 600px;
+    min-width: 400px;
     background-color: #aaa;
     padding: 20px;
     border: 3px solid black;
@@ -33,6 +32,7 @@ img {
     background-color: #f6f6f6;
     border: 3px solid black;
     border-radius: 10px;
+    margin-bottom: 10px;
     height: 40px;
     padding: 20px;
 }
@@ -43,6 +43,7 @@ button {
     border: 3px solid black;
     border-radius: 10px;
     transition: 120ms;
+    cursor: pointer;
 }
 
 button:hover {
@@ -51,8 +52,15 @@ button:hover {
 }
 
 .buttons1 {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-content: right;
+    margin-bottom: 10px;
 }
 
+.buttons2 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
