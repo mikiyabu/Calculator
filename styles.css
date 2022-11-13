@@ -1,6 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 body {
@@ -29,7 +29,7 @@ img {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    background-color: #f6f6f6;
+    background-color: #eee;
     border: 3px solid black;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -38,7 +38,7 @@ img {
 }
 
 button {
-    background-color: #f6f6f6;
+    background-color: #eee;
     padding: 15px;
     border: 3px solid black;
     border-radius: 10px;
@@ -47,13 +47,41 @@ button {
 }
 
 button:hover {
-    transform: scale(1);
-    background-color: lightgrey;
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+.clear {
+    background-color: #faa;
+}
+
+.clear:hover {
+    background-color: #e99;
+}
+
+.clear:active {
+    background-color: #d88;
+}
+
+.delete {
+    background-color: #aaf;
+}
+
+.delete:hover {
+    background-color: #99e;
+}
+
+.delete:active {
+    background-color: #88d;
 }
 
 .buttons1 {
     display: grid;
-    justify-content: right;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -61,6 +89,5 @@ button:hover {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
 }
 
