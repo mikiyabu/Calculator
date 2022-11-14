@@ -1,12 +1,21 @@
-let buttons = Array.from(document.querySelectorAll('button'));
+const buttons = Array.from(document.querySelectorAll('button'));
+const clear = document.querySelector('.clear');
 
-let display = document.querySelector('.display');
+const display = document.querySelector('.display');
+display.textContent = '0';
 
-buttons.map(button => {
+buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-        const element = document.createElement('p');
-        element.textContent = e.target.innerText;
-        display.appendChild('element');
+        e.preventDefault();
+        if (display.textContent === '0') {
+            display.textContent = e.target.textContent;
+        }
+        else {
+            display.textContent += e.target.textContent;
+        }
     });
 });
 
+clear.addEventListener('click', () => {
+    display.textContent = '0';
+});
